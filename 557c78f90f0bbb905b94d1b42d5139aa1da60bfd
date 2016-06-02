@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "991dc1f9_da894533",
+        "filename": "manifest/parser_test.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2016-06-02T10:26:27Z",
+      "side": 1,
+      "message": "this actually is a verbatim cut \u0026 paste of the android manifest file, so I\u0027d rather leave as is.",
+      "parentUuid": "f9423ddd_dd894b33",
+      "revId": "557c78f90f0bbb905b94d1b42d5139aa1da60bfd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d951f9a9_dc894d33",
         "filename": "manifest/parser_test.go",
         "patchSetId": 1
@@ -47,6 +65,24 @@
       "writtenOn": "2016-06-02T09:11:10Z",
       "side": 1,
       "message": "I would prefer two separate tests here only testing one function at a time:\n\nTestParseManifest() -\u003e see if you can parse an XML and if it is deepEqual to what you expect\nTestMarshalXML() -\u003e see if you can marshal a memory object and if the XML string is equal to what you expect\n(optional) integration test that tests a roundtrip as your current TestBasic does.\n\nThis will make it faster to find bugs.",
+      "revId": "557c78f90f0bbb905b94d1b42d5139aa1da60bfd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "79200d2e_d9895333",
+        "filename": "manifest/parser_test.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2016-06-02T10:26:27Z",
+      "side": 1,
+      "message": "added a separate roundtrpi test. We don\u0027t test the XML string directly, because the formatting is not uniquely determined.",
+      "parentUuid": "f9423ddd_9d93c363",
       "revId": "557c78f90f0bbb905b94d1b42d5139aa1da60bfd",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
