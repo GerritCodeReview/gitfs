@@ -16,6 +16,24 @@
       "revId": "71417816878434f09445a6696d54616e9d2efcf6",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "26775210_46937260",
+        "filename": "cmd/gitfs-expand-manifest/main.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2016-06-03T11:54:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "86cf1e72_2189ee34",
+      "revId": "71417816878434f09445a6696d54616e9d2efcf6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
