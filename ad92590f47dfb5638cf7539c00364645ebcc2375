@@ -16,6 +16,24 @@
       "revId": "ad92590f47dfb5638cf7539c00364645ebcc2375",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a39a5476_d2f0049f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2016-06-07T11:37:58Z",
+      "side": 1,
+      "message": "yes, we should work on packaging, documentation, tooling etc. But for now, we first have to get something that we ourselves can get working.",
+      "parentUuid": "e3c28c56_d4d71c00",
+      "revId": "ad92590f47dfb5638cf7539c00364645ebcc2375",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
