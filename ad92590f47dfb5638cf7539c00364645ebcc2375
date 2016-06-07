@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e3c28c56_d4d71c00",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1026112
+      },
+      "writtenOn": "2016-06-07T06:35:54Z",
+      "side": 1,
+      "message": "I think we should provide a {shell,python} script to the android guys for installing all of this (go, set a GOPATH, lib2go, manifest, expand-manigest, libgit2, gofuse, ...). I guess shell would be better, as they would have to install python first otherwise.",
+      "revId": "ad92590f47dfb5638cf7539c00364645ebcc2375",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
