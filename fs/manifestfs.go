@@ -75,6 +75,8 @@ func (fs *manifestFSRoot) OnMount(fsConn *nodefs.FileSystemConnector) {
 	fs.trees = nil
 }
 
+// TODO(hanwen): support LinkFile directives.
+
 func (fs *manifestFSRoot) onMount(fsConn *nodefs.FileSystemConnector) error {
 	var byDepth [][]string
 	for p := range fs.trees {
@@ -126,6 +128,26 @@ func (fs *manifestFSRoot) onMount(fsConn *nodefs.FileSystemConnector) error {
 			if err := subRoot.(*gitilesRoot).onMount(fsConn); err != nil {
 				return fmt.Errorf("onMount(%s): %v", p, err)
 			}
+		}
+	}
+
+	for _, p := range fs.options.Manifest.Project {
+		for _, cp := range p.Copyfile {
+			srcNode, left := fsConn.Node(fs.Inode(), filepath.Join(p.Path, cp.Src))
+			if len(left) > 0 {
+				return fmt.Errorf("Copyfile(%s): source %s does not exist", p.Name, cp.Src)
+			}
+
+			dir, left := fsConn.Node(fs.Inode(), cp.Dest)
+			switch len(left) {
+			case 0:
+				return fmt.Errorf("Copyfile(%s): dest %s already exists.", p.Name, cp.Dest)
+			case 1:
+			default:
+				return fmt.Errorf("Copyfile(%s): directory for dest %s does not exist.", p.Name, cp.Dest)
+			}
+
+			dir.AddChild(left[0], srcNode)
 		}
 	}
 
@@ -187,5 +209,3 @@ func fetchTreeMap(treeCache *cache.TreeCache, service *gitiles.Service, mf *mani
 	}
 	return resmap, nil
 }
-
-// TODO(hanwen): support LinkFile and CopyFile directives.
