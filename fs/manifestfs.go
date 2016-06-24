@@ -18,6 +18,7 @@ import (
 	"fmt"
 	"log"
 	"path/filepath"
+	"regexp"
 	"strings"
 
 	"github.com/google/gitfs/cache"
@@ -33,6 +34,8 @@ type manifestFSRoot struct {
 	service *gitiles.Service
 
 	cache *cache.Cache
+
+	// trees is Path => Tree map.
 	trees map[string]*gitiles.Tree
 
 	options ManifestOptions
@@ -56,6 +59,21 @@ func NewManifestFS(service *gitiles.Service, cache *cache.Cache, opts ManifestOp
 		options:     opts,
 		manifestXML: xml,
 	}
+
+	var cloneDepthOpts []CloneOption
+	for _, p := range opts.Manifest.Project {
+		if p.CloneDepth != "" {
+			//  If clone-depth is set, we want to fault in
+			//  the individual files.
+			cloneDepthOpts = append(
+				cloneDepthOpts, CloneOption{
+					RE:    regexp.MustCompile("^" + regexp.QuoteMeta(p.Name) + "$"),
+					Clone: false,
+				})
+		}
+	}
+
+	root.options.RepoCloneOption = append(cloneDepthOpts, root.options.RepoCloneOption...)
 
 	for _, p := range opts.Manifest.Project {
 		if _, err := git.NewOid(p.Revision); err != nil {
@@ -231,7 +249,6 @@ func fetchTreeMap(treeCache *cache.TreeCache, service *gitiles.Service, mf *mani
 		result = append(result, r)
 	}
 
-	//
 	resmap := map[string]*gitiles.Tree{}
 	for _, r := range result {
 		if r.err != nil {
