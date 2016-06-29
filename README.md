@@ -6,19 +6,27 @@ Android.
 How to use
 ==========
 
-To start,
+To start the file system:
 
-    go install github.com/google/gitfs/cmd/gitfs-{multifs,expand-manifest}
-    gitfs-expand-manifest --gitiles https://android.googlesource.com/ \
-       > /tmp/m.xml
+    go install github.com/google/gitfs/cmd/gitfs-multifs
     mkdir /tmp/mnt
     gitfs-multifs -cache /tmp/cache -gitiles https://android.googlesource.com/  /tmp/mnt &
 
-then, in another terminal, execute
+To create a workspace "ws" corresponding to the manifest in m.xml.
 
+    go install github.com/google/gitfs/cmd/gitfs-expand-manifest
+    gitfs-expand-manifest --gitiles https://android.googlesource.com/ \
+       > /tmp/m.xml &&
     ln -s /tmp/m.xml /tmp/mnt/config/ws
 
-To create a workspace "ws" corresponding to the manifest in m.xml.
+To populate a checkout
+
+    go install github.com/google/gitfs/cmd/gitfs-populate
+    mkdir -p checkout/frameworks
+    cd checkout/frameworks
+    git clone https://android.googlesource.com/platform/frameworks/base
+    cd ../
+    gitfs-populate -ro /tmp/mnt/ws .
 
 
 Configuring
