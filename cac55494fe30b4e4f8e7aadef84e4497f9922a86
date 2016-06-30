@@ -22,6 +22,30 @@
       "revId": "cac55494fe30b4e4f8e7aadef84e4497f9922a86",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "200c9fbf_67b53290",
+        "filename": "cache/gitcache.go",
+        "patchSetId": 3
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2016-06-30T12:22:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "200c9fbf_87a6e672",
+      "range": {
+        "startLine": 123,
+        "startChar": 19,
+        "endLine": 123,
+        "endChar": 28
+      },
+      "revId": "cac55494fe30b4e4f8e7aadef84e4497f9922a86",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
