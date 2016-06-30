@@ -44,6 +44,10 @@ func (r *multiManifestFSRoot) OnMount(fsConn *nodefs.FileSystemConnector) {
 
 func (r *configNode) Deletable() bool { return false }
 
+func (r *configNode) GetXAttr(attribute string, context *fuse.Context) (data []byte, code fuse.Status) {
+	return nil, fuse.ENODATA
+}
+
 func NewMultiFS(service *gitiles.Service, c *cache.Cache, options MultiFSOptions) *multiManifestFSRoot {
 	r := &multiManifestFSRoot{
 		Node:    nodefs.NewDefaultNode(),
