@@ -48,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "a02ecf8e_ce1fe3b2",
+        "filename": "design.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2016-06-30T12:21:28Z",
+      "side": 1,
+      "message": "The design is where we want to go; it\u0027s not the current state.",
+      "parentUuid": "a02ecf8e_6e0fcf87",
+      "range": {
+        "startLine": 20,
+        "startChar": 20,
+        "endLine": 20,
+        "endChar": 23
+      },
+      "revId": "30f62a46ffa9101e96470942744e6b19fb575d19",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "200c9fbf_27961a08",
         "filename": "design.md",
         "patchSetId": 5
@@ -59,6 +83,30 @@
       "writtenOn": "2016-06-30T12:17:11Z",
       "side": 1,
       "message": "Remove",
+      "range": {
+        "startLine": 45,
+        "startChar": 48,
+        "endLine": 45,
+        "endChar": 49
+      },
+      "revId": "30f62a46ffa9101e96470942744e6b19fb575d19",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a02ecf8e_8e19dbce",
+        "filename": "design.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2016-06-30T12:21:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "200c9fbf_27961a08",
       "range": {
         "startLine": 45,
         "startChar": 48,
@@ -94,6 +142,30 @@
     },
     {
       "key": {
+        "uuid": "200c9fbf_a7ba0a81",
+        "filename": "design.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2016-06-30T12:21:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a02ecf8e_8e40bb90",
+      "range": {
+        "startLine": 47,
+        "startChar": 48,
+        "endLine": 47,
+        "endChar": 49
+      },
+      "revId": "30f62a46ffa9101e96470942744e6b19fb575d19",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "200c9fbf_07931618",
         "filename": "design.md",
         "patchSetId": 5
@@ -105,6 +177,30 @@
       "writtenOn": "2016-06-30T12:17:11Z",
       "side": 1,
       "message": "Is GoB the public name? If not, please change to something the outside world knows",
+      "range": {
+        "startLine": 62,
+        "startChar": 97,
+        "endLine": 62,
+        "endChar": 100
+      },
+      "revId": "30f62a46ffa9101e96470942744e6b19fb575d19",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a02ecf8e_6e746fe9",
+        "filename": "design.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2016-06-30T12:21:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "200c9fbf_07931618",
       "range": {
         "startLine": 62,
         "startChar": 97,
