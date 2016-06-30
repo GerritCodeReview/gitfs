@@ -45,6 +45,30 @@
       "revId": "2171fafbd1f0d4fd69d1365585f14769141346c0",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "200c9fbf_c7729ecc",
+        "filename": "cmd/gitfs-populate/main.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 303,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2016-06-30T12:27:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a02ecf8e_ae1c97be",
+      "range": {
+        "startLine": 303,
+        "startChar": 18,
+        "endLine": 303,
+        "endChar": 30
+      },
+      "revId": "2171fafbd1f0d4fd69d1365585f14769141346c0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
