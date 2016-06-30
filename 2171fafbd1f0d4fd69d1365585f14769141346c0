@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a02ecf8e_0e83abe9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1026112
+      },
+      "writtenOn": "2016-06-30T12:23:40Z",
+      "side": 1,
+      "message": "It looks like you also introduce diffing here. Should be in the commit message then.",
+      "range": {
+        "startLine": 7,
+        "startChar": 2,
+        "endLine": 7,
+        "endChar": 42
+      },
+      "revId": "2171fafbd1f0d4fd69d1365585f14769141346c0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a02ecf8e_ae1c97be",
+        "filename": "cmd/gitfs-populate/main.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 303,
+      "author": {
+        "id": 1026112
+      },
+      "writtenOn": "2016-06-30T12:23:40Z",
+      "side": 1,
+      "message": "parallelize",
+      "range": {
+        "startLine": 303,
+        "startChar": 18,
+        "endLine": 303,
+        "endChar": 30
+      },
+      "revId": "2171fafbd1f0d4fd69d1365585f14769141346c0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
