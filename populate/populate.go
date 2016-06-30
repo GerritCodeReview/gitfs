@@ -18,9 +18,12 @@ package populate
 
 import (
 	"bytes"
+	"flag"
 	"fmt"
+	"log"
 	"os"
 	"path/filepath"
+	"runtime/pprof"
 	"sort"
 	"strings"
 )
@@ -253,4 +256,31 @@ func Checkout(ro, rw string) (added, changed []string, err error) {
 	}
 
 	return added, changed, nil
+}
+
+func main() {
+	cpuProfile := flag.String("profile", "", "write cpu profile to `file`")
+	mount := flag.String("ro", "", "path to gitfs-multifs mount.")
+	flag.Parse()
+
+	dir := "."
+	if len(flag.Args()) == 1 {
+		dir = flag.Arg(0)
+	} else if len(flag.Args()) > 1 {
+		log.Fatal("too many arguments.")
+	}
+
+	if *cpuProfile != "" {
+		f, err := os.Create(*cpuProfile)
+		if err != nil {
+			log.Fatal(err)
+		}
+		defer f.Close()
+		pprof.StartCPUProfile(f)
+		defer pprof.StopCPUProfile()
+	}
+
+	if err := populateCheckout(*mount, dir); err != nil {
+		log.Fatalf("populateCheckout: %v", err)
+	}
 }
