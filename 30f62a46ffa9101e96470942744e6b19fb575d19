@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "200c9fbf_47890ee4",
+        "filename": "CONTRIBUTING",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1026112
+      },
+      "writtenOn": "2016-06-30T12:17:11Z",
+      "side": 1,
+      "message": "Gerrit Change",
+      "range": {
+        "startLine": 1,
+        "startChar": 29,
+        "endLine": 1,
+        "endChar": 31
+      },
+      "revId": "30f62a46ffa9101e96470942744e6b19fb575d19",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a02ecf8e_6e0fcf87",
+        "filename": "design.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1026112
+      },
+      "writtenOn": "2016-06-30T12:17:11Z",
+      "side": 1,
+      "message": "The tests don\u0027t run on Mac, so I assume the main logic might have difficulties as well? Should we write this somewhere?",
+      "range": {
+        "startLine": 20,
+        "startChar": 20,
+        "endLine": 20,
+        "endChar": 23
+      },
+      "revId": "30f62a46ffa9101e96470942744e6b19fb575d19",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "200c9fbf_27961a08",
+        "filename": "design.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1026112
+      },
+      "writtenOn": "2016-06-30T12:17:11Z",
+      "side": 1,
+      "message": "Remove",
+      "range": {
+        "startLine": 45,
+        "startChar": 48,
+        "endLine": 45,
+        "endChar": 49
+      },
+      "revId": "30f62a46ffa9101e96470942744e6b19fb575d19",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a02ecf8e_8e40bb90",
+        "filename": "design.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1026112
+      },
+      "writtenOn": "2016-06-30T12:17:11Z",
+      "side": 1,
+      "message": "Remove. Please also fix the other spaces further down.",
+      "range": {
+        "startLine": 47,
+        "startChar": 48,
+        "endLine": 47,
+        "endChar": 49
+      },
+      "revId": "30f62a46ffa9101e96470942744e6b19fb575d19",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "200c9fbf_07931618",
+        "filename": "design.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1026112
+      },
+      "writtenOn": "2016-06-30T12:17:11Z",
+      "side": 1,
+      "message": "Is GoB the public name? If not, please change to something the outside world knows",
+      "range": {
+        "startLine": 62,
+        "startChar": 97,
+        "endLine": 62,
+        "endChar": 100
+      },
+      "revId": "30f62a46ffa9101e96470942744e6b19fb575d19",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
