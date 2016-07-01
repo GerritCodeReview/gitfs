@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bd66fa34_34f03069",
+        "filename": "fs/gitilesfs_test.go",
+        "patchSetId": 3
+      },
+      "lineNbr": 437,
+      "author": {
+        "id": 1026112
+      },
+      "writtenOn": "2016-07-01T13:23:16Z",
+      "side": 1,
+      "message": "Given that code review should be a quality control and you just introduced some extra logic here I think we should split up the test in the change rather then placing a TODO",
+      "range": {
+        "startLine": 437,
+        "startChar": 1,
+        "endLine": 437,
+        "endChar": 61
+      },
+      "revId": "0377f389ce4cf40e09de608e0cb9c6d024f346ce",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
