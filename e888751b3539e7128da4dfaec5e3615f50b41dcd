@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "bd66fa34_547ccc9b",
+        "filename": "cache/lazyrepo.go",
+        "patchSetId": 3
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1026112
+      },
+      "writtenOn": "2016-07-01T13:40:52Z",
+      "side": 1,
+      "message": "Not here for instance.",
+      "range": {
+        "startLine": 43,
+        "startChar": 40,
+        "endLine": 43,
+        "endChar": 41
+      },
+      "revId": "e888751b3539e7128da4dfaec5e3615f50b41dcd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9df6969c_0b7cfdcc",
         "filename": "cache/lazyrepo.go",
         "patchSetId": 3
@@ -37,6 +60,30 @@
       "side": 1,
       "message": "yeah. (bad?) habit. It\u0027s all over the file though.\n\nSee also https://en.wikipedia.org/wiki/Sentence_spacing",
       "parentUuid": "9df6969c_0b7cfdcc",
+      "range": {
+        "startLine": 51,
+        "startChar": 23,
+        "endLine": 51,
+        "endChar": 25
+      },
+      "revId": "e888751b3539e7128da4dfaec5e3615f50b41dcd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9df6969c_6bd301e1",
+        "filename": "cache/lazyrepo.go",
+        "patchSetId": 3
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1026112
+      },
+      "writtenOn": "2016-07-01T13:40:52Z",
+      "side": 1,
+      "message": "huh. we can do it either way, however you prefer. but we should be consistent.",
+      "parentUuid": "9df6969c_cb7155f0",
       "range": {
         "startLine": 51,
         "startChar": 23,
