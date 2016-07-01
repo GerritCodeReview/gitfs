@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9df6969c_cb16759b",
+        "filename": "android.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1026112
+      },
+      "writtenOn": "2016-07-01T13:20:36Z",
+      "side": 1,
+      "message": "Can we have a proper JSON indentation here? Would make it much more readable.\n\n[\n    {\n        \"Repo\" : \".*darwin.*\",\n        \"Clone\": false\n    },\n    {\n        \"File\" : \".*mk$\",\n        \"Clone\" : false\n    },\n    {\n        \"File\" : \".*bp$\",\n        \"Clone\" : false\n    }\n]",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 4,
+        "endChar": 1
+      },
+      "revId": "0d78dbf79ca891770429ac43a5c19c9bf61a3514",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
