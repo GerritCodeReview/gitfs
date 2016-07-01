@@ -25,6 +25,7 @@ import (
 	"path/filepath"
 	"reflect"
 	"regexp"
+	"sort"
 	"strings"
 	"syscall"
 	"testing"
@@ -431,6 +432,22 @@ func TestManifestFS(t *testing.T) {
 		t.Errorf("Readlink(%s): %v", linkPath, err)
 	} else if want := "kati/AUTHORS"; got != want {
 		t.Errorf("Readlink(%s) = %q, want %q", linkPath, got, want)
+	}
+
+	// TODO(hanwen): this test is getting unwieldy. Split it up.
+	var zeroFiles []string
+	if err := filepath.Walk(fix.mntDir, func(n string, fi os.FileInfo, err error) error {
+		if fi != nil && fi.ModTime().UnixNano() == 0 {
+			r, _ := filepath.Rel(fix.mntDir, n)
+			zeroFiles = append(zeroFiles, r)
+		}
+		return nil
+	}); err != nil {
+		t.Fatalf("Walk: %v", err)
+	}
+	if len(zeroFiles) > 0 {
+		sort.Strings(zeroFiles)
+		t.Errorf("found files with zero timestamps: %v", zeroFiles)
 	}
 }
 
