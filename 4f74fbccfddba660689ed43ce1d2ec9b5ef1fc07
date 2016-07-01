@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9df6969c_cbe315a8",
+        "filename": "fs/gitilesfs_test.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 361,
+      "author": {
+        "id": 1026112
+      },
+      "writtenOn": "2016-07-01T13:56:29Z",
+      "side": 1,
+      "message": "How about?\n\nfor _,p :\u003d range mf.Project {",
+      "range": {
+        "startLine": 360,
+        "startChar": 1,
+        "endLine": 361,
+        "endChar": 32
+      },
+      "revId": "4f74fbccfddba660689ed43ce1d2ec9b5ef1fc07",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
