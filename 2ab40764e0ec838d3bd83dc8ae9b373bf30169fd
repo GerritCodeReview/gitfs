@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9df6969c_2bd3b913",
+        "filename": "all.bash",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1026112
+      },
+      "writtenOn": "2016-07-01T08:11:27Z",
+      "side": 1,
+      "message": "If you use the sh shebang then your file extension should be .sh for consistency",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 9
+      },
+      "revId": "2ab40764e0ec838d3bd83dc8ae9b373bf30169fd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
