@@ -22,6 +22,30 @@
       "revId": "9dfc20360293ee4aeb3ac912b7070fac0e62993c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bd66fa34_142b7489",
+        "filename": "fs/gitilesfs_test.go",
+        "patchSetId": 3
+      },
+      "lineNbr": 605,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2016-07-01T16:17:44Z",
+      "side": 1,
+      "message": "Debug, thanks for spotting.",
+      "parentUuid": "9df6969c_8bb2ada3",
+      "range": {
+        "startLine": 605,
+        "startChar": 1,
+        "endLine": 605,
+        "endChar": 28
+      },
+      "revId": "9dfc20360293ee4aeb3ac912b7070fac0e62993c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
