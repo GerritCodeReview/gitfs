@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9df6969c_8bb2ada3",
+        "filename": "fs/gitilesfs_test.go",
+        "patchSetId": 3
+      },
+      "lineNbr": 605,
+      "author": {
+        "id": 1026112
+      },
+      "writtenOn": "2016-07-01T16:08:13Z",
+      "side": 1,
+      "message": "Was this used for debugging and forgotten or is it intentional? (the first time you log to something that is not log.Fatal or log.Error)",
+      "range": {
+        "startLine": 605,
+        "startChar": 1,
+        "endLine": 605,
+        "endChar": 28
+      },
+      "revId": "9dfc20360293ee4aeb3ac912b7070fac0e62993c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
