@@ -70,6 +70,10 @@ func newLinkNode(target string) *linkNode {
 func (n *linkNode) GetAttr(out *fuse.Attr, file nodefs.File, context *fuse.Context) (code fuse.Status) {
 	out.Size = uint64(len(n.linkTarget))
 	out.Mode = fuse.S_IFLNK
+
+	t := time.Unix(1, 0)
+	out.SetTimes(nil, &t, nil)
+
 	return fuse.OK
 }
 
@@ -226,6 +230,9 @@ type dataNode struct {
 func (n *dataNode) GetAttr(out *fuse.Attr, file nodefs.File, context *fuse.Context) (code fuse.Status) {
 	out.Size = uint64(len(n.data))
 	out.Mode = fuse.S_IFREG | 0644
+	t := time.Unix(1, 0)
+	out.SetTimes(nil, &t, nil)
+
 	return fuse.OK
 }
 
