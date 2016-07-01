@@ -22,6 +22,30 @@
       "revId": "e888751b3539e7128da4dfaec5e3615f50b41dcd",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9df6969c_cb7155f0",
+        "filename": "cache/lazyrepo.go",
+        "patchSetId": 3
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2016-07-01T13:37:59Z",
+      "side": 1,
+      "message": "yeah. (bad?) habit. It\u0027s all over the file though.\n\nSee also https://en.wikipedia.org/wiki/Sentence_spacing",
+      "parentUuid": "9df6969c_0b7cfdcc",
+      "range": {
+        "startLine": 51,
+        "startChar": 23,
+        "endLine": 51,
+        "endChar": 25
+      },
+      "revId": "e888751b3539e7128da4dfaec5e3615f50b41dcd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
