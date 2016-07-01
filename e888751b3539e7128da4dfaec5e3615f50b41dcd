@@ -93,6 +93,29 @@
       "revId": "e888751b3539e7128da4dfaec5e3615f50b41dcd",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9df6969c_abdcc9ef",
+        "filename": "cache/lazyrepo.go",
+        "patchSetId": 3
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2016-07-01T13:47:26Z",
+      "side": 1,
+      "message": "but here too. Let\u0027s fix this in another CL.",
+      "range": {
+        "startLine": 75,
+        "startChar": 49,
+        "endLine": 75,
+        "endChar": 53
+      },
+      "revId": "e888751b3539e7128da4dfaec5e3615f50b41dcd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
