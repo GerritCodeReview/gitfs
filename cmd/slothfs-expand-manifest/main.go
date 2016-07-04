@@ -34,7 +34,7 @@ func main() {
 		log.Fatal("must set --gitiles")
 	}
 
-	service, err := gitiles.NewService(*gitilesURL)
+	service, err := gitiles.NewService(*gitilesURL, gitiles.Options{})
 	if err != nil {
 		log.Fatal(err)
 	}
