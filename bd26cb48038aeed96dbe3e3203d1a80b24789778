@@ -22,6 +22,30 @@
       "revId": "bd26cb48038aeed96dbe3e3203d1a80b24789778",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ddfd6ec1_e517d63c",
+        "filename": "fs/gitilesfs.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 339,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2016-07-05T14:52:17Z",
+      "side": 1,
+      "message": "covered by an interface. The FUSE library calls this to know if the node must be kept in memory.",
+      "parentUuid": "ddfd6ec1_250f2e2d",
+      "range": {
+        "startLine": 339,
+        "startChar": 18,
+        "endLine": 339,
+        "endChar": 27
+      },
+      "revId": "bd26cb48038aeed96dbe3e3203d1a80b24789778",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
