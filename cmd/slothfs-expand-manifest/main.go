@@ -20,6 +20,7 @@ import (
 	"log"
 	"os"
 
+	"github.com/google/slothfs/cookie"
 	"github.com/google/slothfs/gitiles"
 	"github.com/google/slothfs/manifest"
 )
@@ -28,19 +29,30 @@ func main() {
 	gitilesURL := flag.String("gitiles", "", "URL for gitiles")
 	branch := flag.String("branch", "master", "branch to use for manifest")
 	repo := flag.String("repo", "platform/manifest", "manifest repository")
+	cookieJarPath := flag.String("cookies", "", "path to cURL-style cookie jar file.")
 	flag.Parse()
 
 	if *gitilesURL == "" {
 		log.Fatal("must set --gitiles")
 	}
 
+	opts := gitiles.Options{
+		BurstQPS:     10,
+		SustainedQPS: 5,
+		Redirect:     true,
+	}
+	if *cookieJarPath != "" {
+		var err error
+		opts.CookieJar, err = cookie.NewJar(*cookieJarPath)
+		if err != nil {
+			log.Fatal(err)
+		}
+	}
+
 	// SustainedQPS is a little high, but since this is a one-shot
 	// program let's try to get away with it.
 	service, err := gitiles.NewService(*gitilesURL,
-		gitiles.Options{
-			BurstQPS:     10,
-			SustainedQPS: 5,
-		})
+		opts)
 	if err != nil {
 		log.Fatal(err)
 	}
