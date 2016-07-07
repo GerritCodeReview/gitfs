@@ -22,8 +22,10 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
+	"net"
 	"net/http"
 	"net/url"
+	"os"
 	"path"
 
 	"golang.org/x/net/context"
@@ -34,6 +36,7 @@ import (
 type Service struct {
 	limiter *rate.Limiter
 	addr    url.URL
+	client  http.Client
 }
 
 // Addr returns the address of the gitiles service.
@@ -45,6 +48,11 @@ func (s *Service) Addr() string {
 type Options struct {
 	BurstQPS     int
 	SustainedQPS float64
+
+	// If set, allow HTTP redirects.
+	Redirect bool
+
+	CookieJar http.CookieJar
 }
 
 // NewService returns a new Gitiles JSON client.
@@ -56,14 +64,38 @@ func NewService(addr string, opts Options) (*Service, error) {
 		opts.SustainedQPS = 0.5
 	}
 
+	// If set, force all redirects to use HTTP.
+	redirectForceHTTP := false
+	proxy := os.Getenv("http_proxy")
+
+	if proxy != "" {
+		h, _, err := net.SplitHostPort(proxy)
+		if err == nil && (h == "localhost" || h == "127.0.0.1") {
+			// This is for use with proxies that wrap
+			// connections securely.
+			redirectForceHTTP = true
+		}
+	}
+
 	url, err := url.Parse(addr)
 	if err != nil {
 		return nil, err
 	}
-	return &Service{
+	s := &Service{
 		limiter: rate.NewLimiter(rate.Limit(opts.SustainedQPS), opts.BurstQPS),
 		addr:    *url,
-	}, nil
+	}
+
+	s.client.Jar = opts.CookieJar
+	if opts.Redirect {
+		s.client.CheckRedirect = func(req *http.Request, via []*http.Request) error {
+			if redirectForceHTTP {
+				req.URL.Scheme = "http"
+			}
+			return nil
+		}
+	}
+	return s, nil
 }
 
 func (s *Service) get(u url.URL) ([]byte, error) {
@@ -72,7 +104,7 @@ func (s *Service) get(u url.URL) ([]byte, error) {
 	if err := s.limiter.Wait(ctx); err != nil {
 		return nil, err
 	}
-	resp, err := http.Get(u.String())
+	resp, err := s.client.Get(u.String())
 
 	if err != nil {
 		return nil, err
