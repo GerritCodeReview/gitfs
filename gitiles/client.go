@@ -34,6 +34,7 @@ import (
 type Service struct {
 	limiter *rate.Limiter
 	addr    url.URL
+	client  http.Client
 }
 
 // Addr returns the address of the gitiles service.
@@ -45,6 +46,7 @@ func (s *Service) Addr() string {
 type Options struct {
 	BurstQPS     int
 	SustainedQPS float64
+	CookieJar    http.CookieJar
 }
 
 // NewService returns a new Gitiles JSON client.
@@ -60,10 +62,16 @@ func NewService(addr string, opts Options) (*Service, error) {
 	if err != nil {
 		return nil, err
 	}
-	return &Service{
+	s := &Service{
 		limiter: rate.NewLimiter(rate.Limit(opts.SustainedQPS), opts.BurstQPS),
 		addr:    *url,
-	}, nil
+	}
+
+	s.client.Jar = opts.CookieJar
+	s.client.CheckRedirect = func(req *http.Request, via []*http.Request) error {
+		return nil
+	}
+	return s, nil
 }
 
 func (s *Service) get(u url.URL) ([]byte, error) {
@@ -72,14 +80,14 @@ func (s *Service) get(u url.URL) ([]byte, error) {
 	if err := s.limiter.Wait(ctx); err != nil {
 		return nil, err
 	}
-	resp, err := http.Get(u.String())
+	resp, err := s.client.Get(u.String())
 
 	if err != nil {
 		return nil, err
 	}
 	defer resp.Body.Close()
 	if resp.StatusCode != 200 {
-		return nil, fmt.Errorf("%s: %s", u.String(), resp.Status)
+		return nil, fmt.Errorf("%s: %s (%d)", u.String(), resp.Status, resp.Status)
 	}
 
 	c, err := ioutil.ReadAll(resp.Body)

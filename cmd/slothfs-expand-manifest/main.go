@@ -17,30 +17,99 @@ package main
 import (
 	"flag"
 	"fmt"
+	"io"
 	"log"
+	"net"
 	"os"
+	"sync"
 
+	"github.com/google/slothfs/cookie"
 	"github.com/google/slothfs/gitiles"
 	"github.com/google/slothfs/manifest"
 )
+
+func logCopy(w io.Writer, r io.Reader, who string) {
+	var buf [320000]byte
+
+	for {
+		n, e1 := r.Read(buf[:])
+		log.Println(who, string(buf[:n]))
+		_, e2 := w.Write(buf[:n])
+		if e1 != nil || e2 != nil {
+			break
+		}
+	}
+}
+
+func forward(conn net.Conn, addr string) {
+	f, err := net.Dial("tcp", addr)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	var wg sync.WaitGroup
+	wg.Add(2)
+	go func() {
+		logCopy(f, conn, "A")
+		wg.Done()
+	}()
+	go func() {
+		logCopy(conn, f, "B")
+		wg.Done()
+	}()
+	wg.Wait()
+	f.Close()
+	conn.Close()
+}
+
+func tapTraffic() {
+	proxy := os.Getenv("http_proxy")
+	l, err := net.Listen("tcp", ":0")
+	if err != nil {
+		log.Fatal(err)
+	}
+	os.Setenv("http_proxy", l.Addr().String())
+
+	go func() {
+		for {
+			c, err := l.Accept()
+			if err != nil {
+				break
+			}
+			go forward(c, proxy)
+		}
+	}()
+}
 
 func main() {
 	gitilesURL := flag.String("gitiles", "", "URL for gitiles")
 	branch := flag.String("branch", "master", "branch to use for manifest")
 	repo := flag.String("repo", "platform/manifest", "manifest repository")
+	cookieJarPath := flag.String("cookies", "", "path to cURL-style cookie jar file.")
 	flag.Parse()
+
+	tapTraffic()
 
 	if *gitilesURL == "" {
 		log.Fatal("must set --gitiles")
 	}
 
+	opts := gitiles.Options{
+		BurstQPS:     10,
+		SustainedQPS: 5,
+	}
+	if *cookieJarPath != "" {
+		var err error
+		opts.CookieJar, err = cookie.NewJar(*cookieJarPath)
+		if err != nil {
+			log.Fatal(err)
+		}
+	}
+
 	// SustainedQPS is a little high, but since this is a one-shot
 	// program let's try to get away with it.
 	service, err := gitiles.NewService(*gitilesURL,
-		gitiles.Options{
-			BurstQPS:     10,
-			SustainedQPS: 5,
-		})
+		opts)
 	if err != nil {
 		log.Fatal(err)
 	}
