@@ -93,6 +93,30 @@
       "revId": "1f454e4f15df3af9de9ad1f28f577909459621a7",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a8488cc_222e8eef",
+        "filename": "cookie/cookie.go",
+        "patchSetId": 5
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 1026112
+      },
+      "writtenOn": "2016-07-08T09:30:41Z",
+      "side": 1,
+      "message": "You are right, it only checks if it\u0027s http or https. The intention behind the url that you pass along though is that it is set to to URL the cookie was received from.\n\nYou load it from a file, which is fine, but usually that cookie would be passed to use by the site we are authenticating with. Depending on if this is http/https, this would be set, so it would be cleaner to set it to the appropriate schema, if the information is available.\n\nIt\u0027s an optional fix though, feel free to leave this as it is.",
+      "parentUuid": "7a8488cc_a2e85eae",
+      "range": {
+        "startLine": 96,
+        "startChar": 12,
+        "endLine": 96,
+        "endChar": 16
+      },
+      "revId": "1f454e4f15df3af9de9ad1f28f577909459621a7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
