@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "5a87c4d1_c1cc826f",
+        "filename": "cmd/slothfs-multifs/main.go",
+        "patchSetId": 5
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2016-07-08T09:19:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5a87c4d1_81ae7a96",
+      "range": {
+        "startLine": 37,
+        "startChar": 54,
+        "endLine": 37,
+        "endChar": 64
+      },
+      "revId": "1f454e4f15df3af9de9ad1f28f577909459621a7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a8488cc_c29a4277",
         "filename": "cookie/cookie.go",
         "patchSetId": 5
@@ -36,6 +60,30 @@
       "writtenOn": "2016-07-08T07:13:06Z",
       "side": 1,
       "message": "Why is this hardcoded to http? Can\u0027t users have https if they wish?",
+      "range": {
+        "startLine": 96,
+        "startChar": 12,
+        "endLine": 96,
+        "endChar": 16
+      },
+      "revId": "1f454e4f15df3af9de9ad1f28f577909459621a7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a8488cc_a2e85eae",
+        "filename": "cookie/cookie.go",
+        "patchSetId": 5
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2016-07-08T09:19:01Z",
+      "side": 1,
+      "message": "It needs to be http or https, otherwise  it\u0027s not set. I don\u0027t see any other use of the Scheme.",
+      "parentUuid": "7a8488cc_c29a4277",
       "range": {
         "startLine": 96,
         "startChar": 12,
