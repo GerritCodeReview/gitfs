@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3a53f056_981df5bb",
+        "filename": "cmd/slothfs-populate/main_test.go",
+        "patchSetId": 3
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1026112
+      },
+      "writtenOn": "2016-07-11T08:16:35Z",
+      "side": 1,
+      "message": "Seems unrelated and could also be deleted.",
+      "revId": "8598d95c27529e77de5971d01953a4c296a1cd01",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
