@@ -52,6 +52,24 @@
       "revId": "8598d95c27529e77de5971d01953a4c296a1cd01",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a562c46_570ccc90",
+        "filename": "cmd/slothfs-populate/main_test.go",
+        "patchSetId": 3
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2016-07-11T10:55:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1a562c46_171254ae",
+      "revId": "8598d95c27529e77de5971d01953a4c296a1cd01",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
