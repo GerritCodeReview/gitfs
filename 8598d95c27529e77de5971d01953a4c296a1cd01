@@ -16,6 +16,24 @@
       "revId": "8598d95c27529e77de5971d01953a4c296a1cd01",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a562c46_3724b810",
+        "filename": "cmd/slothfs-populate/main_test.go",
+        "patchSetId": 3
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2016-07-11T10:40:07Z",
+      "side": 1,
+      "message": "what exactly? createFSTree has multiple callsites in this file.",
+      "parentUuid": "3a53f056_981df5bb",
+      "revId": "8598d95c27529e77de5971d01953a4c296a1cd01",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
