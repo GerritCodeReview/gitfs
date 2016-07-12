@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "dad49439_6d051544",
+        "filename": "gitiles/client.go",
+        "patchSetId": 6
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2016-07-12T14:15:11Z",
+      "side": 1,
+      "message": "I got rid of this.",
+      "parentUuid": "faaeb864_068a9a2e",
+      "revId": "53bcc56e918eb3e30613f8b79f4a27606ccee1c7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "faaeb864_66858e1f",
         "filename": "gitiles/client.go",
         "patchSetId": 6
@@ -30,6 +48,24 @@
       "writtenOn": "2016-07-08T12:30:04Z",
       "side": 1,
       "message": "This shouldn\u0027t be necessary. Our proxy configuration already rewrites https-\u003ehttp in Location headers (and also removes the secure bit from cookies). The need to do this is one reason it doesn\u0027t support CONNECT.\n\nThe case where you need to rewrite is where your user, not the server, presents a URL that looks like https://foo but you need to rewrite it before connecting to the proxy.",
+      "revId": "53bcc56e918eb3e30613f8b79f4a27606ccee1c7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dad49439_4d02593e",
+        "filename": "gitiles/client.go",
+        "patchSetId": 6
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2016-07-12T14:15:11Z",
+      "side": 1,
+      "message": "I added an option to set the User-Agent, which conditions some of the rewrites. With the right User-Agent, it seems to work now.",
+      "parentUuid": "faaeb864_66858e1f",
       "revId": "53bcc56e918eb3e30613f8b79f4a27606ccee1c7",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
