@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a300813_0274cadf",
+        "filename": "cmd/slothfs-expand-manifest/main.go",
+        "patchSetId": 10
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1010008
+      },
+      "writtenOn": "2016-07-12T16:47:21Z",
+      "side": 1,
+      "message": "For logging and debugging purposes we really like having version numbers in User-Agent headers. Could this string be a prefix or include a placeholder that gets filled in during the build process?",
+      "revId": "d003fe41892ff5a40c4ae4bec364682ad7322c62",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a300813_e270c6ed",
+        "filename": "gitiles/client.go",
+        "patchSetId": 10
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1010008
+      },
+      "writtenOn": "2016-07-12T16:47:21Z",
+      "side": 1,
+      "message": "Why would anyone ever want to set this to false?",
+      "revId": "d003fe41892ff5a40c4ae4bec364682ad7322c62",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fadf9821_de410598",
+        "filename": "gitiles/client.go",
+        "patchSetId": 10
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1010008
+      },
+      "writtenOn": "2016-07-12T16:47:21Z",
+      "side": 1,
+      "message": "Is Header.Set more appropriate?",
+      "revId": "d003fe41892ff5a40c4ae4bec364682ad7322c62",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
