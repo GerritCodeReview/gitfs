@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "dad49439_8d7ba15b",
+        "filename": "cmd/slothfs-expand-manifest/main.go",
+        "patchSetId": 10
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2016-07-13T12:49:44Z",
+      "side": 1,
+      "message": "The Go build tool has no provisions for this, so it\u0027s hard to put something here.\n\nInside google, we would patch in a version number from Piper.",
+      "parentUuid": "7a300813_0274cadf",
+      "revId": "d003fe41892ff5a40c4ae4bec364682ad7322c62",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a300813_e270c6ed",
         "filename": "gitiles/client.go",
         "patchSetId": 10
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "dad49439_4d8ed998",
+        "filename": "gitiles/client.go",
+        "patchSetId": 10
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2016-07-13T12:49:44Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a300813_e270c6ed",
+      "revId": "d003fe41892ff5a40c4ae4bec364682ad7322c62",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fadf9821_de410598",
         "filename": "gitiles/client.go",
         "patchSetId": 10
@@ -47,6 +83,24 @@
       "writtenOn": "2016-07-12T16:47:21Z",
       "side": 1,
       "message": "Is Header.Set more appropriate?",
+      "revId": "d003fe41892ff5a40c4ae4bec364682ad7322c62",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dad49439_2d8b8d88",
+        "filename": "gitiles/client.go",
+        "patchSetId": 10
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2016-07-13T12:49:44Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fadf9821_de410598",
       "revId": "d003fe41892ff5a40c4ae4bec364682ad7322c62",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
