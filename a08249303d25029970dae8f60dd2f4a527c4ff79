@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ba51a0aa_dc0ced95",
+        "filename": "fs/manifestfs.go",
+        "patchSetId": 3
+      },
+      "lineNbr": 239,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2016-07-14T09:53:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ba51a0aa_dca86d8e",
+      "revId": "a08249303d25029970dae8f60dd2f4a527c4ff79",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ba51a0aa_7cba79cf",
         "filename": "populate/repotree.go",
         "patchSetId": 3
@@ -30,6 +48,30 @@
       "writtenOn": "2016-07-14T07:18:46Z",
       "side": 1,
       "message": "Can you add package descriptions as suggested by \n\nhttps://blog.golang.org/godoc-documenting-go-code\n\nfor all the packages in both slothfs and zoekt?",
+      "range": {
+        "startLine": 15,
+        "startChar": 8,
+        "endLine": 15,
+        "endChar": 16
+      },
+      "revId": "a08249303d25029970dae8f60dd2f4a527c4ff79",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a4cdc15_db0cf395",
+        "filename": "populate/repotree.go",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2016-07-14T09:53:30Z",
+      "side": 1,
+      "message": "added here.\n\nI\u0027ll do the rest in a separate CL.",
+      "parentUuid": "ba51a0aa_7cba79cf",
       "range": {
         "startLine": 15,
         "startChar": 8,
