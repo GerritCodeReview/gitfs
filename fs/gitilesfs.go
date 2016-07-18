@@ -18,8 +18,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
+	"io/ioutil"
 	"log"
+	"net/url"
 	"os"
+	"path"
 	"path/filepath"
 	"sync"
 	"syscall"
@@ -294,6 +297,10 @@ func newDataNode(c []byte) nodefs.Node {
 
 // NewGitilesRoot returns the root node for a file system.
 func NewGitilesRoot(c *cache.Cache, tree *gitiles.Tree, service *gitiles.RepoService, options GitilesOptions) nodefs.Node {
+	if service == nil && c.Git.OpenLocal(options.CloneURL) == nil {
+		log.Panicf("must have local clone if service is not supplied.")
+	}
+
 	r := &gitilesRoot{
 		Node:         newDirNode(),
 		service:      service,
@@ -361,12 +368,11 @@ func (r *gitilesRoot) pathTo(fsConn *nodefs.FileSystemConnector, dir string) *no
 }
 
 func (r *gitilesRoot) onMount(fsConn *nodefs.FileSystemConnector) error {
+	submodules := map[string]string{}
+	var moduleConfigID *git.Oid
 	for _, e := range r.tree.Entries {
 		if e.Type == "commit" {
-			// TODO(hanwen): support submodules.  For now,
-			// we pretend we are plain git, which also
-			// leaves an empty directory in the place of a submodule.
-			r.pathTo(fsConn, e.Name)
+			submodules[e.Name] = e.ID
 			continue
 		}
 		if e.Type != "blob" {
@@ -380,6 +386,10 @@ func (r *gitilesRoot) onMount(fsConn *nodefs.FileSystemConnector) error {
 		id, err := git.NewOid(e.ID)
 		if err != nil {
 			return err
+		}
+
+		if e.Type == "blob" && e.Name == ".gitmodules" {
+			moduleConfigID = id
 		}
 
 		// Determine if file should trigger a clone.
@@ -422,7 +432,13 @@ func (r *gitilesRoot) onMount(fsConn *nodefs.FileSystemConnector) error {
 		} else {
 			parent.AddChild(base, n.Inode())
 		}
+	}
 
+	if len(submodules) > 0 {
+		if moduleConfigID == nil {
+			return fmt.Errorf("submodules defined, but no .gitmodules file found")
+		}
+		r.mountSubmodules(moduleConfigID, submodules, fsConn)
 	}
 
 	slothfsNode := r.Inode().NewChild(".slothfs", true, newDirNode())
@@ -437,5 +453,63 @@ func (r *gitilesRoot) onMount(fsConn *nodefs.FileSystemConnector) error {
 
 	// We don't need the tree data anymore.
 	r.tree = nil
+	return nil
+}
+
+func (r *gitilesRoot) mountSubmodules(id *git.Oid, submodules map[string]string, fsConn *nodefs.FileSystemConnector) error {
+	file, err := r.openFile(*id, false)
+	if err != nil {
+		return fmt.Errorf("can't open .gitmodules file with SHA1 %s: %v", id.String(), err)
+	}
+
+	c, err := ioutil.ReadAll(file)
+	if err != nil {
+		return err
+	}
+
+	moduleURLs, err := ParseSubmodules(c)
+	if err != nil {
+		return err
+	}
+
+	for subPath, sha1 := range submodules {
+		subURL, ok := moduleURLs[subPath]
+		if !ok {
+			return fmt.Errorf(".gitmodules does not have entry for %s", subPath)
+		}
+
+		if parsed, err := url.Parse(subURL); err != nil {
+			parsed, _ = url.Parse(r.opts.CloneURL)
+			parsed.Path = path.Join(parsed.Path, subURL)
+			subURL = parsed.String()
+		}
+
+		// TODO(hanwen): in case the URL is relative, generate
+		// a relative Gitiles service object too and don't
+		// clone the repo.
+		repo, err := r.cache.Git.Open(subURL)
+		if err != nil {
+			return fmt.Errorf("submodule %s: error cloning %s: %v", subPath, subURL, err)
+		}
+
+		tree, err := cache.GetTree(repo, id)
+		if err != nil {
+			return fmt.Errorf("submodule %s: tree %s: %v", subPath, id.String(), err)
+		}
+
+		opts := GitilesOptions{
+			Revision:    sha1,
+			CloneURL:    subURL,
+			CloneOption: r.opts.CloneOption,
+		}
+
+		subFS := NewGitilesRoot(r.cache, tree, nil, opts)
+		dir, base := filepath.Split(subPath)
+		parent := r.pathTo(fsConn, dir)
+		parent.NewChild(base, true, subFS)
+		if err := subFS.(*gitilesRoot).onMount(fsConn); err != nil {
+			return err
+		}
+	}
 	return nil
 }
