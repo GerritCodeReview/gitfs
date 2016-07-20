@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ad3d7eb_12a64c59",
+        "filename": "cookie/cookie.go",
+        "patchSetId": 4
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 1026112
+      },
+      "writtenOn": "2016-07-20T12:39:23Z",
+      "side": 1,
+      "message": "Not sure if this has support on OS X.",
+      "range": {
+        "startLine": 84,
+        "startChar": 11,
+        "endLine": 84,
+        "endChar": 32
+      },
+      "revId": "0213eb659a2c9511b156157f68361ad2487fee67",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
