@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "caacc370_a5961ee0",
+        "filename": "fs/gitilesfs_test.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 814,
+      "author": {
+        "id": 1026112
+      },
+      "writtenOn": "2016-07-20T12:36:00Z",
+      "side": 1,
+      "message": "again?",
+      "range": {
+        "startLine": 814,
+        "startChar": 21,
+        "endLine": 814,
+        "endChar": 26
+      },
+      "revId": "3970570b34df226d93c5389f243f90bef5e1050a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
