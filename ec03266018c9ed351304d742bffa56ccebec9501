@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8add6b60_4bbec5a9",
+        "filename": "cmd/slothfs-manifestfs/main.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1026112
+      },
+      "writtenOn": "2016-07-22T13:41:20Z",
+      "side": 1,
+      "message": "The required flags stay the same, right? Might keep a more descriptive error message then",
+      "range": {
+        "startLine": 48,
+        "startChar": 26,
+        "endLine": 48,
+        "endChar": 33
+      },
+      "revId": "ec03266018c9ed351304d742bffa56ccebec9501",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4a1533be_49e5a1cf",
+        "filename": "cookie/cookie.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1026112
+      },
+      "writtenOn": "2016-07-22T13:41:20Z",
+      "side": 1,
+      "message": "Seems unrelated?",
+      "range": {
+        "startLine": 100,
+        "startChar": 10,
+        "endLine": 100,
+        "endChar": 20
+      },
+      "revId": "ec03266018c9ed351304d742bffa56ccebec9501",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
