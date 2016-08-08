@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "398b03e2_a0cb7a49",
+        "filename": "docs/manual.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2016-08-08T15:17:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f43ed29a_4e9cf300",
+      "revId": "4c674685711d38f4a789eadaec7fe9f4b6797724",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f43ed29a_2e9fa7f7",
         "filename": "docs/manual.md",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2016-08-08T15:07:57Z",
       "side": 1,
       "message": "Since this is a dependency, would it make more sense to put it before the `all.bash` step.",
+      "revId": "4c674685711d38f4a789eadaec7fe9f4b6797724",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "398b03e2_00bfc6a2",
+        "filename": "docs/manual.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2016-08-08T15:17:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f43ed29a_2e9fa7f7",
       "revId": "4c674685711d38f4a789eadaec7fe9f4b6797724",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
