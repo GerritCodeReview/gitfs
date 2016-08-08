@@ -23,6 +23,10 @@ Installing
 Run `all.bash` to compile, test and install all components.  The rest of this
 document assumes this has been done, and `$GOPATH/bin/` is in your `$PATH`.
 
+SlothFS depends git2go, which depends on libgit2.  For git2go, we recommend
+compiling libgit2 in statically, as documented
+[here](https://github.com/libgit2/git2go#from-next).
+
 In addition, install the standard Android `clone.json` to avoid unnecessary git
 clones
 
