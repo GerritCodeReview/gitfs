@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b46ffaaa_147bd4d0",
+        "filename": "docs/manual.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1010008
+      },
+      "writtenOn": "2016-08-08T15:25:11Z",
+      "side": 1,
+      "message": "For now this is fine. But considering your audience is git users and/or Android developers, I don\u0027t think it\u0027s a safe assumption that they know how to install Go and setup GOPATH.",
+      "range": {
+        "startLine": 35,
+        "startChar": 54,
+        "endLine": 36,
+        "endChar": 13
+      },
+      "revId": "42b632d75a9a03cce62e99f18ef161b116ea8ca4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
