@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f43ed29a_8e509b3b",
+        "filename": "fs/manifestfs.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 248,
+      "author": {
+        "id": 1010008
+      },
+      "writtenOn": "2016-08-08T15:19:59Z",
+      "side": 1,
+      "message": "This subexpression is equal to what you assigned cached to on l. 234 above. So this simplifies to (!cached \u0026\u0026 cached) which  is always false.",
+      "range": {
+        "startLine": 248,
+        "startChar": 17,
+        "endLine": 248,
+        "endChar": 42
+      },
+      "revId": "bbaec3fb250ec7fe57f9fbebd1ed19d7e099b859",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
