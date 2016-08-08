@@ -22,6 +22,30 @@
       "revId": "bbaec3fb250ec7fe57f9fbebd1ed19d7e099b859",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "598a77dc_21220e10",
+        "filename": "fs/manifestfs.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 248,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2016-08-08T15:20:49Z",
+      "side": 1,
+      "message": "l.246 and l.238 mutate tree and err",
+      "parentUuid": "f43ed29a_8e509b3b",
+      "range": {
+        "startLine": 248,
+        "startChar": 17,
+        "endLine": 248,
+        "endChar": 42
+      },
+      "revId": "bbaec3fb250ec7fe57f9fbebd1ed19d7e099b859",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
