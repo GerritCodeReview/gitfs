@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b9b2930f_fc7b0921",
+        "filename": "cmd/slothfs-populate/main.go",
+        "patchSetId": 3
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1027267
+      },
+      "writtenOn": "2016-08-09T15:50:06Z",
+      "side": 1,
+      "message": "Do you think you might regret not logging the os.Open error anywhere?",
+      "revId": "888ac24d0194d3f616930a28bc549fcc6929ae20",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d974a70d_45860a11",
+        "filename": "cmd/slothfs-populate/main.go",
+        "patchSetId": 3
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 1027267
+      },
+      "writtenOn": "2016-08-09T15:50:06Z",
+      "side": 1,
+      "message": "Some flag docstrings you start with a capital letter, others you don\u0027t.",
+      "revId": "888ac24d0194d3f616930a28bc549fcc6929ae20",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d974a70d_858f2220",
+        "filename": "populate/deref.go",
+        "patchSetId": 3
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1027267
+      },
+      "writtenOn": "2016-08-09T15:50:06Z",
+      "side": 1,
+      "message": "And Project.CloneURL?",
+      "revId": "888ac24d0194d3f616930a28bc549fcc6929ae20",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b9b2930f_dc804df6",
+        "filename": "populate/deref.go",
+        "patchSetId": 3
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1027267
+      },
+      "writtenOn": "2016-08-09T15:50:06Z",
+      "side": 1,
+      "message": "This condition could use a comment. If rev isn\u0027t parseable as an Oid, then it must be a branch name?",
+      "revId": "888ac24d0194d3f616930a28bc549fcc6929ae20",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d974a70d_658b0616",
+        "filename": "populate/deref.go",
+        "patchSetId": 3
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1027267
+      },
+      "writtenOn": "2016-08-09T15:50:06Z",
+      "side": 1,
+      "message": "Why build the map in the first place? Is it to remove duplicates? Could use a comment about that as well.",
+      "revId": "888ac24d0194d3f616930a28bc549fcc6929ae20",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
