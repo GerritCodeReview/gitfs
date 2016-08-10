@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "99914f64_ab43099b",
+        "filename": "cmd/slothfs-deref-manifest/main.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1027267
+      },
+      "writtenOn": "2016-08-10T17:07:36Z",
+      "side": 1,
+      "message": "You probably just want one or the other of these prepositions, not both.",
+      "range": {
+        "startLine": 28,
+        "startChar": 59,
+        "endLine": 28,
+        "endChar": 68
+      },
+      "revId": "711c8446e00ee7c4ca16d5660471149a6996460c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "99914f64_cb405591",
+        "filename": "cmd/slothfs-gitilesfs/main.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1027267
+      },
+      "writtenOn": "2016-08-10T17:07:36Z",
+      "side": 1,
+      "message": "There\u0027s a lot of opportunity for deduplication of flag definitions and validation here, maybe something for me to take a shot at if I feel the need to scratch a go itch. :)",
+      "revId": "711c8446e00ee7c4ca16d5660471149a6996460c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
