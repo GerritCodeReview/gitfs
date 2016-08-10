@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "591517be_09b0c9d6",
+        "filename": "cmd/slothfs-populate/main.go",
+        "patchSetId": 3
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2016-08-10T10:37:31Z",
+      "side": 1,
+      "message": "no :-)\n\nif it doesn\u0027t work, people will file a bug :)\n\n(realistically, this only happens on OSX, I think.)",
+      "parentUuid": "b9b2930f_fc7b0921",
+      "revId": "888ac24d0194d3f616930a28bc549fcc6929ae20",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d974a70d_45860a11",
         "filename": "cmd/slothfs-populate/main.go",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2016-08-09T15:50:06Z",
       "side": 1,
       "message": "Some flag docstrings you start with a capital letter, others you don\u0027t.",
+      "revId": "888ac24d0194d3f616930a28bc549fcc6929ae20",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "79357b61_82bfdaa0",
+        "filename": "cmd/slothfs-populate/main.go",
+        "patchSetId": 3
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2016-08-10T10:37:31Z",
+      "side": 1,
+      "message": "uniformized syntax.",
+      "parentUuid": "d974a70d_45860a11",
       "revId": "888ac24d0194d3f616930a28bc549fcc6929ae20",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "79357b61_62c2d633",
+        "filename": "populate/deref.go",
+        "patchSetId": 3
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2016-08-10T10:37:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d974a70d_858f2220",
+      "revId": "888ac24d0194d3f616930a28bc549fcc6929ae20",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b9b2930f_dc804df6",
         "filename": "populate/deref.go",
         "patchSetId": 3
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "591517be_49b6c1d7",
+        "filename": "populate/deref.go",
+        "patchSetId": 3
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2016-08-10T10:37:31Z",
+      "side": 1,
+      "message": "yes, that\u0027s the assumption. \n\nhttps://gerrit.googlesource.com/git-repo/+/master/docs/manifest-format.txt#147",
+      "parentUuid": "b9b2930f_dc804df6",
+      "revId": "888ac24d0194d3f616930a28bc549fcc6929ae20",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d974a70d_658b0616",
         "filename": "populate/deref.go",
         "patchSetId": 3
@@ -81,6 +153,24 @@
       "writtenOn": "2016-08-09T15:50:06Z",
       "side": 1,
       "message": "Why build the map in the first place? Is it to remove duplicates? Could use a comment about that as well.",
+      "revId": "888ac24d0194d3f616930a28bc549fcc6929ae20",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "591517be_29b38de7",
+        "filename": "populate/deref.go",
+        "patchSetId": 3
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2016-08-10T10:37:31Z",
+      "side": 1,
+      "message": "added a comment. List() wants a set of branches, so we dedup them.",
+      "parentUuid": "d974a70d_658b0616",
       "revId": "888ac24d0194d3f616930a28bc549fcc6929ae20",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
