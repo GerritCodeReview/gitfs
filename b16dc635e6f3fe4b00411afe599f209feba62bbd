@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4be70257_892fe1fa",
+        "filename": "manifest/parser.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1026112
+      },
+      "writtenOn": "2016-09-20T14:34:15Z",
+      "side": 1,
+      "message": "unrelated change, can keep it anyway",
+      "revId": "b16dc635e6f3fe4b00411afe599f209feba62bbd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
