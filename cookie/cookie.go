@@ -17,7 +17,6 @@ package cookie
 
 import (
 	"bufio"
-	"fmt"
 	"io"
 	"log"
 	"net/http"
@@ -54,7 +53,7 @@ func ParseCookieJar(r io.Reader) ([]*http.Cookie, error) {
 		}
 		fields := strings.Split(line, "\t")
 		if len(fields) != 7 {
-			return nil, fmt.Errorf("got %d fields in line %q, want 8", len(fields), line)
+			continue
 		}
 
 		exp, err := strconv.ParseInt(fields[4], 10, 64)
