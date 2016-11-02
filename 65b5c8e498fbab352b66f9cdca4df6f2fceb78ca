@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cbe93b6b_62711651",
+        "filename": "cookie/cookie.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2016-11-02T09:23:09Z",
+      "side": 1,
+      "message": "shouldn\u0027t this insert an empty cookie? \n\nAlso, only continue without error if it\u0027s 6 fields, and the rest parses correctly.",
+      "range": {
+        "startLine": 56,
+        "startChar": 3,
+        "endLine": 56,
+        "endChar": 11
+      },
+      "revId": "65b5c8e498fbab352b66f9cdca4df6f2fceb78ca",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
