@@ -241,9 +241,11 @@ func TestGitilesFSNotInGit(t *testing.T) {
 		t.Fatal("Tree:", err)
 	}
 
-	options := GitilesOptions{
+	options := GitilesRevisionOptions{
 		Revision: "ce34badf691d36e8048b63f89d1a86ee5fa4325c",
-		CloneURL: fmt.Sprintf("http://%s/platform/build/kati", fix.testServer.addr),
+		GitilesOptions: GitilesOptions{
+			CloneURL: fmt.Sprintf("http://%s/platform/build/kati", fix.testServer.addr),
+		},
 	}
 
 	fs := NewGitilesRoot(fix.cache, treeResp, repoService, options)
@@ -269,7 +271,7 @@ func TestGitilesFSSharedNodes(t *testing.T) {
 		t.Fatal("Tree:", err)
 	}
 
-	options := GitilesOptions{}
+	options := GitilesRevisionOptions{}
 
 	fs := NewGitilesRoot(fix.cache, treeResp, repoService, options)
 	if err := fix.mount(fs); err != nil {
@@ -308,7 +310,7 @@ func TestGitilesFSTreeID(t *testing.T) {
 		t.Fatal("Tree:", err)
 	}
 
-	options := GitilesOptions{}
+	options := GitilesRevisionOptions{}
 
 	fs := NewGitilesRoot(fix.cache, treeResp, repoService, options)
 	if err := fix.mount(fs); err != nil {
@@ -358,7 +360,7 @@ func TestGitilesFSSubmodule(t *testing.T) {
 			ID:   "ce34badf691d36e8048b63f89d1a86ee5fa4325c",
 		}},
 	}
-	fs := NewGitilesRoot(fix.cache, tree, repoService, GitilesOptions{})
+	fs := NewGitilesRoot(fix.cache, tree, repoService, GitilesRevisionOptions{})
 	if err := fix.mount(fs); err != nil {
 		t.Fatal("mount", err)
 	}
@@ -392,9 +394,8 @@ func TestGitilesFSBasic(t *testing.T) {
 		t.Fatal("Tree:", err)
 	}
 
-	options := GitilesOptions{
-		CloneOption: fileOpts,
-	}
+	options := GitilesRevisionOptions{}
+	options.CloneOption = fileOpts
 
 	fs := NewGitilesRoot(fix.cache, treeResp, repoService, options)
 	if err := fix.mount(fs); err != nil {
@@ -443,7 +444,7 @@ func TestGitilesFSCachedRead(t *testing.T) {
 		t.Fatal("Tree:", err)
 	}
 
-	options := GitilesOptions{
+	options := GitilesRevisionOptions{
 		Revision: "ce34badf691d36e8048b63f89d1a86ee5fa4325c",
 	}
 
@@ -486,7 +487,7 @@ func TestGitilesFSTimeStamps(t *testing.T) {
 		t.Fatal("Tree:", err)
 	}
 
-	fs := NewGitilesRoot(fix.cache, treeResp, repoService, GitilesOptions{})
+	fs := NewGitilesRoot(fix.cache, treeResp, repoService, GitilesRevisionOptions{})
 	if err := fix.mount(fs); err != nil {
 		t.Fatal("mount", err)
 	}
@@ -521,7 +522,7 @@ func TestGitilesFSMultiFetch(t *testing.T) {
 		t.Fatal("Tree:", err)
 	}
 
-	options := GitilesOptions{
+	options := GitilesRevisionOptions{
 		Revision: "ce34badf691d36e8048b63f89d1a86ee5fa4325c",
 	}
 
