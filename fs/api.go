@@ -26,10 +26,17 @@ type CloneOption struct {
 	Clone bool
 }
 
-// GitilesOptions configures the Gitiles filesystem.
-type GitilesOptions struct {
+// GitilesOptions configures the Gitiles filesystem (ie. Gitiles
+// backed FS at a certain revision.)
+type GitilesRevisionOptions struct {
+	// The revision
 	Revision string
 
+	GitilesOptions
+}
+
+// GitilesOptions sets options for NewGitilesConfigRoot.
+type GitilesOptions struct {
 	// If set, clone the repo on reads from here.
 	CloneURL string
 
