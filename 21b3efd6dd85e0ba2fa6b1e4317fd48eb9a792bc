@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "edcc5755_0cdb970b",
+        "filename": "fs/api.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1026112
+      },
+      "writtenOn": "2016-11-30T17:59:00Z",
+      "side": 1,
+      "message": "remove",
+      "range": {
+        "startLine": 32,
+        "startChar": 1,
+        "endLine": 32,
+        "endChar": 16
+      },
+      "revId": "21b3efd6dd85e0ba2fa6b1e4317fd48eb9a792bc",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
