@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "edcc5755_eca88b56",
+        "filename": "gitiles/client.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 1026112
+      },
+      "writtenOn": "2016-11-30T17:47:05Z",
+      "side": 1,
+      "message": "nit: unrelated, but just leave it here",
+      "range": {
+        "startLine": 244,
+        "startChar": 4,
+        "endLine": 244,
+        "endChar": 41
+      },
+      "revId": "21ba78301167c6b9287d34320838d029dab20bbb",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
