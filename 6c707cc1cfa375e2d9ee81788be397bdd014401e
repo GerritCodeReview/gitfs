@@ -22,6 +22,24 @@
       "revId": "6c707cc1cfa375e2d9ee81788be397bdd014401e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2dc74f2e_71347210",
+        "filename": "fs/gitileshostfs.go",
+        "patchSetId": 4
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2016-12-06T11:11:58Z",
+      "side": 1,
+      "message": "done. moved the sanity check into the gitiles client.",
+      "parentUuid": "2dc74f2e_9159dea7",
+      "revId": "6c707cc1cfa375e2d9ee81788be397bdd014401e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
