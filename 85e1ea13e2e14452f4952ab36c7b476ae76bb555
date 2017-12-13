@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bc42758d_0c529f41",
+        "filename": "gitiles/prod_test.go",
+        "patchSetId": 4
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1026112
+      },
+      "writtenOn": "2017-12-13T09:11:25Z",
+      "side": 1,
+      "message": "Hm, a test that makes connections to the outside world is brittle since it can\u0027t run in a sandbox",
+      "revId": "85e1ea13e2e14452f4952ab36c7b476ae76bb555",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
