@@ -16,6 +16,24 @@
       "revId": "85e1ea13e2e14452f4952ab36c7b476ae76bb555",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "852edede_771e6499",
+        "filename": "gitiles/prod_test.go",
+        "patchSetId": 4
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2017-12-13T10:14:45Z",
+      "side": 1,
+      "message": "yes, that\u0027s why it\u0027s called \"Production\" and is in prod_test.go\n\nIt\u0027s tricky to fix this in Go, since you\u0027d need to run a gitiles server for a real test.",
+      "parentUuid": "bc42758d_0c529f41",
+      "revId": "85e1ea13e2e14452f4952ab36c7b476ae76bb555",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
