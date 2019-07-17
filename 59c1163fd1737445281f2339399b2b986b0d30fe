@@ -1,0 +1,10 @@
+{
+  "checks": {
+    "fmt:commitmsg-462a7efcf7234c5824393847968ddd28853aef6e": {
+      "state": "RUNNING",
+      "started": "2019-07-17T10:02:16Z",
+      "created": "2019-07-17T10:02:16Z",
+      "updated": "2019-07-17T10:02:16Z"
+    }
+  }
+}
