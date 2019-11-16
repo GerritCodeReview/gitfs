@@ -1,7 +1,8 @@
 {
   "checks": {
     "fmt:commitmsg-462a7efcf7234c5824393847968ddd28853aef6e": {
-      "state": "RUNNING",
+      "state": "FAILED",
+      "message": "tool failure: Get https://gerrit-review.googlesource.com/changes/224372/revisions/16/files/LICENSE/content: status 404",
       "started": "2019-11-16T04:54:46Z",
       "created": "2019-11-06T17:31:08Z",
       "updated": "2019-11-16T04:54:46Z"
