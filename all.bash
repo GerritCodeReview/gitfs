@@ -33,3 +33,5 @@ cmd/slothfs-gitiles-test \
   go test $p
   go install $p
 done
+
+# test
