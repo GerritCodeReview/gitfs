@@ -1,5 +1,11 @@
 {
   "checks": {
+    "fmt:commitfooter-User-Visible": {
+      "state": "RUNNING",
+      "started": "2020-04-28T15:20:38Z",
+      "created": "2020-04-28T15:20:38Z",
+      "updated": "2020-04-28T15:20:38Z"
+    },
     "fmt:commitmsg-462a7efcf7234c5824393847968ddd28853aef6e": {
       "state": "FAILED",
       "message": "uuid \"fmt:commitmsg-462a7efcf7234c5824393847968ddd28853aef6e\" has unknown language",
