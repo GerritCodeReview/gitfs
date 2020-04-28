@@ -1,7 +1,8 @@
 {
   "checks": {
     "fmt:commitmsg-462a7efcf7234c5824393847968ddd28853aef6e": {
-      "state": "RUNNING",
+      "state": "FAILED",
+      "message": "uuid \"fmt:commitmsg-462a7efcf7234c5824393847968ddd28853aef6e\" has unknown language",
       "started": "2020-04-28T15:20:37Z",
       "created": "2020-04-28T15:20:37Z",
       "updated": "2020-04-28T15:20:37Z"
