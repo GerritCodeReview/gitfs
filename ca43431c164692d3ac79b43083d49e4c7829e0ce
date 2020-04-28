@@ -1,7 +1,8 @@
 {
   "checks": {
     "fmt:commitfooter-User-Visible": {
-      "state": "RUNNING",
+      "state": "FAILED",
+      "message": "uuid \"fmt:commitfooter-User-Visible\" has unknown language",
       "started": "2020-04-28T15:20:38Z",
       "created": "2020-04-28T15:20:38Z",
       "updated": "2020-04-28T15:20:38Z"
