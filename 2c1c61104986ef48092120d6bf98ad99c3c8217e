@@ -1,0 +1,10 @@
+{
+  "checks": {
+    "fmt:commitfooter-User-Visible": {
+      "state": "RUNNING",
+      "started": "2020-04-28T15:04:20Z",
+      "created": "2020-04-28T15:04:20Z",
+      "updated": "2020-04-28T15:04:20Z"
+    }
+  }
+}
