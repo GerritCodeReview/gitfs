@@ -1,5 +1,11 @@
 {
   "checks": {
+    "fmt:commitfooter-User-Visible": {
+      "state": "RUNNING",
+      "started": "2020-04-28T15:03:56Z",
+      "created": "2020-04-28T15:03:56Z",
+      "updated": "2020-04-28T15:03:56Z"
+    },
     "fmt:commitmsg-462a7efcf7234c5824393847968ddd28853aef6e": {
       "state": "SUCCESSFUL",
       "started": "2020-04-28T09:03:25Z",
