@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1602141e_834aef09",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3247544
+      },
+      "writtenOn": "2024-01-12T00:33:33Z",
+      "side": 1,
+      "message": "https://gerrit-review.googlesource.com/#/q/I6b42407d92304fdd6ca14611235904bc04e62847",
+      "revId": "4cf808767dde282a981ffcb0e1d1bd342925c408",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
